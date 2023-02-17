@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Users } from '../../interface/user'
-import { FaAngleRight, FaArchive, FaMapMarkerAlt, FaUserCircle } from "react-icons/fa";
+import { FaAngleRight, FaArchive } from "react-icons/fa";
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { SearchButton } from '../search/style';
+import { ContainerUser, ImgAvatar, UserDescription, UserLink, UserName } from './style';
 
-export const User = ({ avatar_url, name, login, html_url, location, email, public_repos }: Users) => {
+export const User = ({ avatar_url, name, login, html_url, location, email, public_repos, followers,following }: Users) => {
 
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -26,22 +26,18 @@ export const User = ({ avatar_url, name, login, html_url, location, email, publi
 
     return (
         <>
-
-
-            <div className="container-user" onClick={handleOpen}>
-                <img src={avatar_url} alt={name} title={name} className="img-avatar" />
-                <div className="user__description">
+            <ContainerUser onClick={handleOpen}>
+                <ImgAvatar src={avatar_url} alt={name} title={name} />
+                <UserDescription>
                     <div>
-                        <p className="user-name">{login}</p>
-                        <p className="user-link"> {html_url}</p>
+                        <UserName>{login}</UserName>
+                        <UserLink> {html_url}</UserLink>
                     </div>
                     <div className="icon-flag">
                         <FaAngleRight />
                     </div>
-                </div>
-            </div>
-
-
+                </UserDescription>
+            </ContainerUser>
 
             <div>
                 <Modal
@@ -55,32 +51,49 @@ export const User = ({ avatar_url, name, login, html_url, location, email, publi
                             <div className="bloco_modal__user-avatar">
                                 <img className="modal__user-avatar" src={avatar_url} alt={name} />
                             </div>
-                            <div className=''>
-                                <div className="bloco_modal__user-avatar">
-                                
+                            <div className='modal__description'>
+                                <div>
                                     <p>
-                                        {name}
+                                        Usuário: {login}
                                     </p>
                                 </div>
 
-                                <div className="bloco_modal__user-avatar">
+                                <div>
                                     <p>
-                                        {location}
+                                        url: {html_url}
                                     </p>
                                 </div>
-
-                                <div className="bloco_modal__user-avatar">
+                                <div>
                                     <p>
-                                        {email}
+                                        Nome: {name}
                                     </p>
                                 </div>
-
-                                <div className="bloco_modal__user-avatar">
+                                <div>
                                     <p>
-                                        <span><FaArchive /></span> {public_repos}
+                                        Cidade: {location}
                                     </p>
                                 </div>
-                                <SearchButton> Ver repositorios</SearchButton>
+                                <div>
+                                    <p>
+                                        Email: {email}
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Seguidores:  {followers}
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Seguindo:  {following}
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Repositórios: {public_repos}
+                                    </p>
+                                </div>
+                           
                             </div>
                         </div>
 

@@ -6,6 +6,8 @@ export interface Users {
     avatar_url: string,
     html_url: string
     public_repos: string
+    followers:number,
+    following:number
 }
 
 export interface Searchs {
