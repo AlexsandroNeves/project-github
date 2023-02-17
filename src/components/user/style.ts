@@ -10,6 +10,9 @@ export const ContainerUser = styled.div`
     background: #fff;
     border-radius: 10px;
     margin-top: 30px;
+    @media (max-width: 768px) {
+        width: 90%;
+      }
 `;
 export const ImgAvatar = styled.img`
     max-width: 80px;
@@ -29,6 +32,9 @@ export const UserName = styled.p`
 
 export const UserLink = styled.p`
     color: #aeaeae;
+    @media (max-width: 768px) {
+        font-size:0.75rem;
+      }
 `;
 
 export const FaAngleRight = styled.svg`

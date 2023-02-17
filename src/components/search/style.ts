@@ -17,6 +17,14 @@ text-transform: uppercase;
 
 export const ContainerSearch = styled.div`
  display: flex;
+ width: 100%;
+ justify-content: center;
+ 
+ @media (max-width: 768px) {
+    width: 90%;
+  }
+
+
 `;
 
 export const SearchInput = styled.input`

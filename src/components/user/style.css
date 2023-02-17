@@ -6,7 +6,7 @@
 }
 
 .modal__user {
-    width: 650px !important;
+    max-width: 650px !important;
     border: none !important;
     border-radius: 20px;
 }
@@ -28,4 +28,10 @@
 
 .modal__button{
     border-radius: 10px;
+}
+
+@media(max-width:768px){
+    .modal__use{
+        width: 90%;
+    }
 }
