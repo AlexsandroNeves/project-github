@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Users } from "../interface/user"
 import { Search } from "../components/search/Search"
-import axios from 'axios'
+import {api} from '../services/api/api'
 import { User } from "../components/user/Index"
 import "../components/user/style.css"
 import { Error } from "./style"
@@ -18,15 +18,15 @@ const Home = () => {
           }
     
         try {
-            await axios.get(`https://api.github.com/users/${userName}`)
+            await api.get(`users/${userName}`)
             .then((res) => {
                 setUser(res.data)
             })
             setInputError('')
         }
         catch (error) {
-            setInputError("Usuario não encontrado");
             setUser(null)
+            setInputError("Usuário não encontrado");
         }
     }
 

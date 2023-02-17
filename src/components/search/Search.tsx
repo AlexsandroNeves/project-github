@@ -6,7 +6,7 @@ export const Search = ({ loadUser }: Searchs) => {
     const [userName, setUserName] = useState('')
     return (
         <Blocksearch>
-            <Title> Explore Usuario no Github</Title>
+            <Title> Explore Usuário no Github</Title>
             <ContainerSearch>
                 <SearchInput type="text" placeholder="Digite o nome do usuário" onChange={(e) => setUserName(e.target.value)} />
                 <SearchButton onClick={() => loadUser(userName)}>
