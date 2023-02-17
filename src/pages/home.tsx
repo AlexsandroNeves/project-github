@@ -1,11 +1,10 @@
 import { useState } from "react"
 import { Users } from "../interface/user"
 import { Search } from "../components/search/Search"
-
+import api from 'axios'
 import { User } from "../components/user/Index"
 import "../components/user/style.css"
 import { Error } from "./style"
-import { api } from "../services/api/api"
 const Home = () => {
 
     const [user, setUser] = useState<Users>()
