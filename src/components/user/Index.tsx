@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Users } from '../../interface/user'
-import { FaAngleRight, FaArchive } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-import { SearchButton } from '../search/style';
 import { ContainerUser, ImgAvatar, UserDescription, UserLink, UserName } from './style';
+import { Button } from '@mui/material';
+import './style.css'
 
 export const User = ({ avatar_url, name, login, html_url, location, email, public_repos, followers,following }: Users) => {
 
@@ -95,6 +96,8 @@ export const User = ({ avatar_url, name, login, html_url, location, email, publi
                                 </div>
                            
                             </div>
+
+                            <Button className='button-modal' onClick={handleClose}>Fechar</Button>
                         </div>
 
                     </Box>

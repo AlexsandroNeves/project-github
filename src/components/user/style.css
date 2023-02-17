@@ -1,4 +1,4 @@
-.modal__description{
+.modal__description {
     max-width: 600px;
     margin: 15px auto;
     display: flex;
@@ -22,16 +22,32 @@
     justify-content: center;
 }
 
-.modal__paragraf{
+.modal__paragraf {
     font-size: 15px;
 }
 
-.modal__button{
+.modal__button {
     border-radius: 10px;
 }
 
-@media(max-width:768px){
-    .modal__use{
+button.button-modal {
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background: #8626F0;
+    color: #fff;
+    font-size: 17px;
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover{
+    background-color: #8626F0 !important;
+    color: #fff;
+}
+
+@media(max-width:768px) {
+    .modal__use {
         width: 90%;
     }
 }
