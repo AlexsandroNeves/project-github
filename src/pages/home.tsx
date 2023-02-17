@@ -25,7 +25,6 @@ const Home = () => {
             setInputError('')
         }
         catch (error) {
-            setUser(null)
             setInputError("Usuário não encontrado");
         }
     }
