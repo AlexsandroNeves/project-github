@@ -2,6 +2,19 @@
 
 ## Instalação de pacotes
 
+
+Deploy do Projeto
+
+```sh
+
+https://project-github-alexsandroneves.vercel.app/
+````
+
+
+
+
+
+
 Instale os pacotes dentro da pasta do projeto:
 
 ```sh
