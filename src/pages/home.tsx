@@ -19,9 +19,9 @@ const Home = () => {
     
         try {
             await api.get(`users/${userName}`)
-            .then((res) => {
-                setUser(res.data)
-            })
+                .then((res) => {
+                    setUser(res.data)
+                })
             setInputError('')
         }
         catch (error) {
