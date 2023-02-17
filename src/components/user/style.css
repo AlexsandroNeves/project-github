@@ -1,0 +1,63 @@
+.container-user {
+    max-width: 710px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.img-avatar {
+    max-width: 80px;
+    border-radius: 70px;
+}
+
+.user-name {
+    font-size: 22px;
+    font-family: 'Open Sans';
+
+}
+
+.user-link {
+    color: #aeaeae;
+}
+
+.user__description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.icon-flag svg {
+    height: 25px;
+    color: #4d4d4d;
+}
+
+
+.user-seguir {
+    display: flex;
+    gap: 15px;
+}
+
+.modal__user {
+    width: 650px !important;
+    border: none !important;
+    border-radius: 20px;
+}
+
+.modal__user-avatar {
+    width: 200px;
+    border-radius: 140px;
+    border: 2 px solid #8626F0;
+}
+
+.bloco_modal__user-avatar {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 15px;
+}
